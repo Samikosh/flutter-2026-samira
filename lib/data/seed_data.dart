@@ -1,0 +1,142 @@
+import '../models/book.dart';
+import '../models/category.dart';
+
+List<Book> getSeedBooks() {
+  final now = DateTime.now();
+
+  return [
+    Book(
+      id:'1',
+      title: 'The Midnight Library',
+      category: BookCategory.fantasy,
+      when: now.add(const Duration(days: 2)),
+      limit: 5,
+      readers: const ['Aida', 'Daniyar'],
+      mode: false,
+      description: 'A novel about choices and possibilities.',
+      favourite: false,
+    ),
+    Book(
+      id:'2',
+      title: 'Project Hail Mary',
+      category: BookCategory.sciFi,
+      when: now.add(const Duration(hours: 3)),
+      limit: 10,
+      readers: const ['Samira'],
+      mode: true, // Онлайн
+      description: 'https://zoom.us/j/123456789',
+      favourite: true,
+    ),
+    Book(
+      id:'3',
+      title: '1984',
+      category: BookCategory.classic,
+      when: now.subtract(const Duration(days: 1)), // Өткен уақыт
+      limit: 10,
+      readers: const ['Arman', 'Zhanar', 'Ainur'],
+      mode: false,
+      description: 'Classic dystopian novel.',
+      favourite: false,
+    ),
+    Book(
+      id:'4',
+      title: 'The Lean Startup',
+      category: BookCategory.business,
+      when: now.add(const Duration(days: 5)),
+      limit: 3,
+      readers: const ['Aida', 'Daniyar', 'Samira'], // FULL
+      mode: false,
+      description: 'How today\'s entrepreneurs use continuous innovation.',
+      favourite: true,
+    ),
+    Book(
+      id:'5',
+      title: 'Thinking, Fast and Slow',
+      category: BookCategory.psychology,
+      when: now.add(const Duration(days: 7)),
+      limit: 8,
+      readers: const [],
+      mode: false,
+      description: null, // Description жоқ
+      favourite: false,
+    ),
+    // 60 таңбадан тұратын ұзын атау
+    Book(
+      id:'6',
+      title: 'The 100-Year-Old Man Who Climbed Out the Window and Disappeared',
+      category: BookCategory.fantasy,
+      when: now.add(const Duration(days: 10)),
+      limit: 12,
+      readers: const ['Zhanar'],
+      mode: false,
+      description: 'A funny adventure novel.',
+      favourite: false,
+    ),
+    Book(
+      id:'7',
+      title: 'Dune',
+      category: BookCategory.sciFi,
+      when: now.add(const Duration(days: 4)),
+      limit: 6,
+      readers: const ['Arman', 'Ainur'],
+      mode: true,
+      description: 'https://discord.gg/readingclub',
+      favourite: true,
+    ),
+    Book(
+      id:'8',
+      title: 'Pride and Prejudice',
+      category: BookCategory.classic,
+      when: now.add(const Duration(days: 14)),
+      limit: 15,
+      readers: const [],
+      mode: false,
+      description: 'Classic romance novel.',
+      favourite: false,
+    ),
+    Book(
+      id:'9',
+      title: 'Zero to One',
+      category: BookCategory.business,
+      when: now.add(const Duration(days: 1)),
+      limit: 5,
+      readers: const ['Daniyar'],
+      mode: true,
+      description: 'https://meet.google.com/abc-defg-hij',
+      favourite: false,
+    ),
+    Book(
+      id:'10',
+      title: 'Atomic Habits',
+      category: BookCategory.psychology,
+      when: now.add(const Duration(days: 3)),
+      limit: 20,
+      readers: const ['Aida', 'Samira', 'Arman', 'Zhanar', 'Ainur'],
+      mode: false,
+      description: 'An easy and proven way to build good habits.',
+      favourite: true,
+    ),
+    Book(
+      id: '11',
+      title: 'The Hobbit',
+      category: BookCategory.fantasy,
+      when: now.subtract(const Duration(days: 5)), // Өткен
+      limit: 8,
+      readers: const ['Samira', 'Daniyar'],
+      mode: false,
+      description: 'A fantasy adventure.',
+      favourite: false,
+    ),
+    Book(
+      id:'12',
+      title: 'Sapiens',
+      category: BookCategory.classic,
+      when: now.add(const Duration(days: 20)),
+      limit: 10,
+      readers: const [],
+      mode: false,
+      description: 'A brief history of humankind.',
+      favourite: false,
+    ),
+  ];
+}
